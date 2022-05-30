@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/purple_200"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/dayNightToggleButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@color/black"
+        android:background="@color/purple_200"
         android:padding="12dp"
         android:src="@drawable/day"
         app:layout_constraintStart_toStartOf="parent"

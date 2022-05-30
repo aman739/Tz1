@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.os.Build
 import android.view.View
 import android.view.WindowInsetsController
-import android.view.WindowManager
 import androidx.lifecycle.MutableLiveData
 
 class   ThemeManager {
@@ -39,16 +38,6 @@ class   ThemeManager {
     fun reverseChangeTheme(newTheme: AppTheme, view: View, duration: Long = 600) {
         changeTheme(newTheme, getViewCoordinates(view), duration, true)
     }
-
-    fun reverseChangeTheme(newTheme: AppTheme, sourceCoordinate: Coordinate, duration: Long = 600) {
-        changeTheme(newTheme, sourceCoordinate, duration, true)
-
-    }
-
-    fun changeTheme(newTheme: AppTheme, view: View, duration: Long = 600) {
-        changeTheme(newTheme, getViewCoordinates(view), duration)
-    }
-
     fun changeTheme(
         newTheme: AppTheme,
         sourceCoordinate: Coordinate,
@@ -65,14 +54,6 @@ class   ThemeManager {
 
         //set LiveData
         getCurrentLiveTheme().value = newTheme
-    }
-
-    fun setStatusBarBackgroundColor(activity: Activity, color: Int) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val window = activity.window
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            syncStatusBarIconsColorWithBackground(activity, color)
-        }
     }
 
     fun syncStatusBarIconsColorWithBackground(activity: Activity, statusBarBackgroundColor: Int) {
@@ -96,13 +77,6 @@ class   ThemeManager {
                     decorView.systemUiVisibility = flags
                 }
             }
-        }
-    }
-
-    fun setNavigationBarBackgroundColor(activity: Activity, color: Int) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            activity.window.navigationBarColor = color
-            syncNavigationBarButtonsColorWithBackground(activity, color)
         }
     }
 
