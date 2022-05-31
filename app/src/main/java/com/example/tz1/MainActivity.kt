@@ -31,6 +31,10 @@ class MainActivity : BaseActivity() {
         val myAppTheme = appTheme as MyAppTheme
         binder.root.setBackgroundColor(myAppTheme.activityIconColor(this))
         syncStatusBarIconColors(appTheme)
+        binder.root.setBackgroundColor(myAppTheme.activityThemeButtonColor(this))
+        syncStatusBarIconColors(appTheme)
+        binder.root.setBackgroundColor(myAppTheme.activityIconColor(this))
+        syncStatusBarIconColors(appTheme)
     }
 
     override fun getStartTheme(): AppTheme {

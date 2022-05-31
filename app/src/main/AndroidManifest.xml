@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tz1">
         <activity
-            android:name=".themes.reverseSample.ReverseActivity"
+            android:name=".reverseSample.ReverseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

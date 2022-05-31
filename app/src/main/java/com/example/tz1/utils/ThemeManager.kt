@@ -38,6 +38,9 @@ class   ThemeManager {
     fun reverseChangeTheme(newTheme: AppTheme, view: View, duration: Long = 600) {
         changeTheme(newTheme, getViewCoordinates(view), duration, true)
     }
+    fun changeTheme(newTheme: AppTheme, view: View, duration: Long = 600) {
+        changeTheme(newTheme, getViewCoordinates(view), duration)
+    }
     fun changeTheme(
         newTheme: AppTheme,
         sourceCoordinate: Coordinate,

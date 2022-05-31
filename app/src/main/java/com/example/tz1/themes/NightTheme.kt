@@ -23,11 +23,11 @@ class NightTheme : MyAppTheme {
     }
 
     override fun activityIconColor(context: Context): Int {
-        return ContextCompat.getColor(context, R.color.white)
+        return ContextCompat.getColor(context, R.color.black)
     }
 
     override fun activityTextColor(context: Context): Int {
-        return ContextCompat.getColor(context, R.color.white)
+        return ContextCompat.getColor(context, R.color.black)
     }
 
     override fun activityThemeButtonColor(context: Context): Int {

@@ -1,4 +1,4 @@
-package com.example.tz1.themes.multiFragmentSample
+package com.example.tz1.multiFragmentSample
 
 import android.os.Build
 import android.os.Bundle

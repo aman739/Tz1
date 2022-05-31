@@ -24,11 +24,11 @@ class LightTheme : MyAppTheme {
     }
 
     override fun activityIconColor(context: Context): Int {
-        return ContextCompat.getColor(context, R.color.black)
+        return ContextCompat.getColor(context, R.color.white)
     }
 
     override fun activityTextColor(context: Context): Int {
-        return ContextCompat.getColor(context, R.color.black)
+        return ContextCompat.getColor(context, R.color.white)
     }
 
     override fun activityThemeButtonColor(context: Context): Int {
